@@ -12,7 +12,7 @@ module.exports = {
     database: 'quiz_app',
     host: '127.0.0.1',
     dialect: 'postgres',
-    use_env_variable: process.env.DATABASE_URL,
+    use_env_variable: 'DATABASE_URL',
     dialectOptions: {
       ssl: {
         require: true,
