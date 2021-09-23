@@ -7,7 +7,11 @@ module.exports = {
     dialect: 'postgres',
   },
     production: {
+    host: 'ec2-54-145-110-118.compute-1.amazonaws.com',
     dialect: 'postgres',
+    username: 'unvgangnzrxdor',
+    password: '804abe4ee190833e028d99ee78fcf1aa01ad0d17eab48f1339e852950aa845dc',
+    database: 'd6hgjattof63aj',
     use_env_variable: process.env.DATABASE_URL,
     dialectOptions: {
       ssl: {
