@@ -7,6 +7,10 @@ const app = express();
 
 
 app.use(cors());
+
+app.get('/', (req, res) => {
+  res.send('hello')
+})
 // app.use('/api/:topic', javascript);
 app.get('/api/javascript', async (req, res) => {
   // const {topic} = req.params;
