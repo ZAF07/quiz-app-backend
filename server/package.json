@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.mjs",
     "dev": "nodemon server.mjs",
-    "seed": "npx sequelize db:seed:all & npm run dev"
+    "seed": "npx sequelize db:seed:all & npm run dev",
+    "build": "npx sequelize db:create & npx sequelize db:migrate & npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
