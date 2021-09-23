@@ -1,5 +1,6 @@
 import sequelizePackage from 'sequelize';
 import allConfig from '../config/config.js';
+import url from 'url';
 
 import initChoiceModel from './JsChoice.mjs';
 import initQuestionModel from './JsQuestion.mjs';
