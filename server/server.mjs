@@ -99,4 +99,4 @@ app.get('/api/sql', async (req, res) => {
 
 const PORT = 5000 || process.env.PORT;
 
-app.listen(PORT, console.log('http://localhost:5000'))
+app.listen(process.env.PORT, console.log('http://localhost:5000'))
