@@ -14,6 +14,15 @@ const env = process.env.NODE_ENV || 'development';
 const config = allConfig[env];
 const db = {};
 
+// let sequelize = new Sequelize(
+//   config.database,
+//   config.username,
+//   config.password,
+//   config
+// );
+
+let sequelize;
+
 if (env === 'production') {
   // Break apart the Heroku database url and rebuild the configs we need
   const { DATABASE_URL } = process.env;
@@ -29,14 +38,16 @@ if (env === 'production') {
   config.host = host;
   config.port = port;
   sequelize = new Sequelize(dbName, username, password, config);
-}
-
-let sequelize = new Sequelize(
+} else {
+  sequelize = new Sequelize(
   config.database,
   config.username,
   config.password,
   config
 );
+}
+
+
 
 db.JsChoice = initChoiceModel(sequelize, Sequelize.DataTypes);
 db.JsQuestion = initQuestionModel(sequelize, Sequelize.DataTypes);
